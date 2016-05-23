@@ -1,0 +1,19 @@
+
+<form ng-submit="submit()" ng-controller="submitController">
+  <table>
+    <tr>
+      <td>State Name</td>
+      <td>Server Name</td>
+    </tr>
+    <tr>
+      <td><input type="text" name="stateCD" ng-model="state.cd" /></td>
+      <td><input type="text" name="serverName" ng-model="state.server" /></td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="stateEnabled" value="true" ng-model="state.enabled" /> Enabled </td>
+      <td><input type="radio" name="stateEnabled" value="false" ng-model="state.enabled" /> Disabled </td>
+    </tr>
+  </table>
+  <input type="submit" id="submit" value="Submit" />
+
+</form>
