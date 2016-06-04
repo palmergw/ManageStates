@@ -1,24 +1,32 @@
-
 <form ng-submit="submit()" ng-controller="submitController">
-  <table>
-    <tr>
-      <td>State Name</td>
-      <td>Server Name</td>
-    </tr>
-    <tr>
-      <td><input type="text" name="stateCD" ng-model="state.cd" /></td>
-      <td><input type="text" name="serverName" ng-model="state.server" /></td>
-    </tr>
-    <tr>
-      <td><input type="radio" name="stateEnabled" value="true" ng-model="state.enabled" /> Enabled </td>
-      <td><input type="radio" name="stateEnabled" value="false" ng-model="state.enabled" /> Disabled </td>
-    </tr>
-  </table>
+  <div layout="row" layout-fill>
+    <div flex="100">
+      <div layout="column">
+        <div flex>State Name</div>
+        <div flex>
+          <input type="text" name="stateCD" ng-model="state.cd" />
+        </div>
+      </div>
+    </div>
+    <div flex>
+      <div layout="column">
+        <div flex>Server Name</div>
+        <div flex>
+          <input type="text" name="serverName" ng-model="state.server" />
+        </div>
+      </div>
+    </div>
+    <div flex>
+      <input type="radio" name="stateEnabled" value="true" ng-model="state.enabled" /> Enabled
+      <input type="radio" name="stateEnabled" value="false" ng-model="state.enabled" /> Disabled
+    </div>
+  </div>
   <input type="submit" id="submit" value="Submit" />
-  
-  <div ng-repeat="state in listOfStates">
-    <input type="text" ng-model="state.cd" /> <input type="text" ng-model="state.server"/> <input ng-model="state.enabled" type="radio" value="true"/> <input ng-model="state.enabled" type="radio" value="false"/>
-    
+
+  <div ng-repeat="state in listOfStates" layout="row">
+    <input type="text" ng-model="state.cd" /> <input type="text" ng-model="state.server" /> <input ng-model="state.enabled"
+      type="radio" value="true" /> <input ng-model="state.enabled" type="radio" value="false" />
+
   </div>
 
 </form>

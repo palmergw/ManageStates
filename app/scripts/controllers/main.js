@@ -27,4 +27,4 @@ app.controller('submitController', ['$scope', 'StateConfiguration', function ($s
     console.log(vm.listOfStates);
   }
 }]);
-
+app.controller('')
